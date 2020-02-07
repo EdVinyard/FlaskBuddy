@@ -1,23 +1,21 @@
 #!/usr/bin/env python3
 
-import socket
+from socket import gethostname
 from os import environ
 from flask import Flask
 import requests
 
 app = Flask(__name__)
+host = gethostname()
 
 
 @app.route('/')
 def me():
-    host = socket.gethostname()
-    return {"hostname": host}, 200
+    return {'hostname': host}, 200
 
 
 @app.route('/buddy')
 def buddy():
-    host = socket.gethostname()
-
     try:
         buddy_uri = environ['BUDDY_URI']
 
