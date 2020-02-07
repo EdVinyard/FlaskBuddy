@@ -1,15 +1,15 @@
-version: '3.3'
+version: '3'
 services:
-    ann:
-        build: .
-        ports:
-            - "8080:80"
-        environment:
-            BUDDY_URI: http://bob
-    bob:
-        build: .
-        ports:
-            - "8081:80"
-        environment: 
-            BUDDY_URI: http://ann
+  ann:
+    image: 360124560392.dkr.ecr.us-east-2.amazonaws.com/flaskbuddy:latest
+    ports:
+      - "80"
+    environment:
+      BUDDY_URI: http://bob
 
+  bob:
+    image: 360124560392.dkr.ecr.us-east-2.amazonaws.com/flaskbuddy:latest
+    ports:
+      - "80"
+    environment:
+      BUDDY_URI: http://ann
