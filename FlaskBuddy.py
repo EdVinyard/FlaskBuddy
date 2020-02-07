@@ -11,11 +11,17 @@ host = gethostname()
 
 @app.route('/')
 def me():
+    """
+    returns information about this service
+    """
     return {'hostname': host}, 200
 
 
 @app.route('/buddy')
 def buddy():
+    """
+    returns information about this service AND its buddy
+    """
     try:
         buddy_uri = environ['BUDDY_URI']
 
