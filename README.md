@@ -1,5 +1,7 @@
 # FlaskBuddy
 
+## [Kubernetes Primer](https://docs.google.com/presentation/d/10XrrzIP0wZQpz4fMb2Am2wYDW_f1E4UV0zFzl65nNmU/edit?usp=sharing)
+
 ## Installation
 
 ### Prerequisites
